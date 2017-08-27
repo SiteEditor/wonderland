@@ -1,2 +1,2 @@
-# wonderland
-WordPress Child Theme For Twenty Seventeen Plus
+# tanin
+Tanin Project
