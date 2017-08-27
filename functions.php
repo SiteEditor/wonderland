@@ -151,7 +151,7 @@ function sed_theme_get_attachment_id_by_url( $url ) {
 
 function wonderland_register_theme_fields( $fields ){
 
-    $fields['products_archive_description'] = array(
+   /* $fields['products_archive_description'] = array(
         'type'              => 'textarea',
         'label'             => __('Product Archive Description', 'site-editor'),
         //'description'       => '',
@@ -195,7 +195,7 @@ function wonderland_register_theme_fields( $fields ){
         'default'           => '',
         'transport'         => 'postMessage' ,
         'panel'             =>  'general_settings'
-    );
+    );*/
 
     return $fields;
 
@@ -239,39 +239,6 @@ function wonderland_per_page_query( $query ) {
     }
 
 }
-
-function wonderland_one_click_checkout(){
-
-    if( !is_admin() && isset( $_REQUEST['wonderland_quick_checkout'] ) && $_REQUEST['wonderland_quick_checkout'] == 1 && isset( $_REQUEST['add_to_cart'] ) ){
-
-        $product_id = (int)$_REQUEST['add_to_cart'];
-
-        WC()->cart->empty_cart();
-
-        WC()->cart->add_to_cart( $product_id );
-
-        $wo_checkout_url = WC()->cart->get_checkout_url();
-
-        wp_safe_redirect( $wo_checkout_url );
-
-        exit();
-
-    }
-
-}
-
-add_action( 'wp_loaded' , 'wonderland_one_click_checkout' );
-
-
-function wonderland_add_google_font( $google_fonts ){
-
-    $google_fonts["David Libre"] = "David Libre";
-
-    return $google_fonts;
-
-}
-
-add_filter( 'sed_google_fonts_filter' , 'wonderland_add_google_font' );
 
 
 
