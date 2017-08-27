@@ -13,7 +13,7 @@
 
 ?>
 
-<div id="post-<?php the_ID(); ?>" <?php post_class( $classes ); ?>> 
+<div id="post-<?php the_ID(); ?>" <?php post_class(); ?>> 
 
 	<div class="custom-post-type-single">
 	    <div class="single-wrapper">

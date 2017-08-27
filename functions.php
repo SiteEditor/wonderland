@@ -84,8 +84,8 @@ function sed_wonderland_add_modules( $modules ){
 
     global $sed_pb_modules;
 
-    $module_name = "themes/wonderland/site-editor/modules/posts/posts.php";
-    $modules[$module_name] = $sed_pb_modules->get_module_data(get_stylesheet_directory() . '/site-editor/modules/posts/posts.php', true, true);
+    //$module_name = "themes/wonderland/site-editor/modules/posts/posts.php";
+    //$modules[$module_name] = $sed_pb_modules->get_module_data(get_stylesheet_directory() . '/site-editor/modules/posts/posts.php', true, true);
 
     //$module_name = "themes/wonderland/site-editor/modules/wonderland-products/wonderland-products.php";
     //$modules[$module_name] = $sed_pb_modules->get_module_data(get_stylesheet_directory() . '/site-editor/modules/wonderland-products/wonderland-products.php', true, true);
@@ -94,18 +94,58 @@ function sed_wonderland_add_modules( $modules ){
     $modules[$module_name ] = $sed_pb_modules->get_module_data(get_stylesheet_directory() . '/site-editor/modules/in-btn-back/in-btn-back.php', true, true);
     
     
-    $module_name = "themes/wonderland/site-editor/modules/vertical-header/vertical-header.php";
-    $modules[$module_name ] = $sed_pb_modules->get_module_data(get_stylesheet_directory() . '/site-editor/modules/vertical-header/vertical-header.php', true, true);
+    //$module_name = "themes/wonderland/site-editor/modules/vertical-header/vertical-header.php";
+    //$modules[$module_name ] = $sed_pb_modules->get_module_data(get_stylesheet_directory() . '/site-editor/modules/vertical-header/vertical-header.php', true, true);
 
     
-    $module_name = "themes/wonderland/site-editor/modules/subscription/subscription.php";
-    $modules[$module_name ] = $sed_pb_modules->get_module_data(get_stylesheet_directory() . '/site-editor/modules/subscription/subscription.php', true, true);     
+    //$module_name = "themes/wonderland/site-editor/modules/subscription/subscription.php";
+    //$modules[$module_name ] = $sed_pb_modules->get_module_data(get_stylesheet_directory() . '/site-editor/modules/subscription/subscription.php', true, true);     
     
     return $modules;
 
 }
 
 add_filter("sed_modules" , "sed_wonderland_add_modules" );
+
+/**
+ * Get an attachment ID given a URL.
+ *
+ * @param string $url
+ *
+ * @return int Attachment ID on success, 0 on failure
+ */
+function sed_theme_get_attachment_id_by_url( $url ) {
+    $attachment_id = 0;
+    $dir = wp_upload_dir();
+    if ( false !== strpos( $url, $dir['baseurl'] . '/' ) ) { // Is URL in uploads directory?
+        $file = basename( $url );
+        $query_args = array(
+            'post_type'   => 'attachment',
+            'post_status' => 'inherit',
+            'fields'      => 'ids',
+            'meta_query'  => array(
+                array(
+                    'value'   => $file,
+                    'compare' => 'LIKE',
+                    'key'     => '_wp_attachment_metadata',
+                ),
+            )
+        );
+        $query = new WP_Query( $query_args );
+        if ( $query->have_posts() ) {
+            foreach ( $query->posts as $post_id ) {
+                $meta = wp_get_attachment_metadata( $post_id );
+                $original_file       = basename( $meta['file'] );
+                $cropped_image_files = wp_list_pluck( $meta['sizes'], 'file' );
+                if ( $original_file === $file || in_array( $file, $cropped_image_files ) ) {
+                    $attachment_id = $post_id;
+                    break;
+                }
+            }
+        }
+    }
+    return $attachment_id;
+}
 
 
 
@@ -233,10 +273,6 @@ function wonderland_add_google_font( $google_fonts ){
 
 add_filter( 'sed_google_fonts_filter' , 'wonderland_add_google_font' );
 
-/**
- * Site Editor Shop WooCommerce
- */
-require dirname(__FILE__) . '/inc/woocommerce.php';
 
 
 
