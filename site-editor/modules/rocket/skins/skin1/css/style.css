@@ -25,7 +25,7 @@
     left: 0;
     position: absolute;
     top: -50px;
-    background-image: url(../img/top-clouds.png);
+    background-image: url(../img/top-clouds.svg);
 }
 
 #satellite > .s#s1.on {
@@ -40,7 +40,7 @@
     left: 0px;
     position: absolute;
     top: 50px;
-    background-image: url(../img/middle-clouds.png);
+    background-image: url(../img/middle-clouds.svg);
 }
 
 #satellite > .s#s2.on {
@@ -55,7 +55,7 @@
     left: 0px;
     position: absolute;
     top: 70px;
-    background-image: url(../img/bottom-clouds.png);
+    background-image: url(../img/bottom-clouds.svg);
 }
 
 #satellite > .s#s3.on {
