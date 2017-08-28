@@ -98,8 +98,8 @@ function sed_wonderland_add_modules( $modules ){
     //$modules[$module_name ] = $sed_pb_modules->get_module_data(get_stylesheet_directory() . '/site-editor/modules/vertical-header/vertical-header.php', true, true);
 
     
-    //$module_name = "themes/wonderland/site-editor/modules/subscription/subscription.php";
-    //$modules[$module_name ] = $sed_pb_modules->get_module_data(get_stylesheet_directory() . '/site-editor/modules/subscription/subscription.php', true, true);     
+    $module_name = "themes/wonderland/site-editor/modules/rocket/rocket.php";
+    $modules[$module_name ] = $sed_pb_modules->get_module_data(get_stylesheet_directory() . '/site-editor/modules/rocket/rocket.php', true, true);
     
     return $modules;
 
