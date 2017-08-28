@@ -35,11 +35,11 @@
     height: 1000px;
     background-position: center bottom;
     z-index: 1;
-    background-size: 100%;
+    background-size: 108%;
 }
 
 #rocket .l#layer1 {
-    bottom: -75px;
+    bottom: -100px;
     z-index: 4;
     background-image: url(../img/clouds-foreground.png);
     background-position: center bottom;
@@ -72,3 +72,26 @@
     left: 50%;
     margin-left: -82px;
 }
+
+
+#games {
+    min-height: 500px;
+    background: #fcf8f5;
+    padding: 50px;
+    position: relative;
+    z-index: 5;
+    padding-top: 0;
+    position: relative;
+    top: -91px;
+    padding-bottom: 0;
+}
+
+/*@keyframes bgswitch {
+    from {background-image:url("../img/rocket.png");}
+    to {background-image:url("../img/rocket-alt.png");}
+}
+
+@-webkit-keyframes bgswitch {
+    from {background-image:url("../img/rocket.png");}
+    to {background-image:url("../img/rocket-alt.png");}
+}*/

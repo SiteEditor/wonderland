@@ -48,13 +48,13 @@
         var rocketctn = document.getElementById("rocket");
         //var planet = document.getElementById("planet");
         //var satellite = document.getElementById("satellite");
-        var games = document.getElementById("colophon");
+        var games = document.getElementById("games");
         //var blog = document.getElementById("blog");
         //var solar = document.getElementById("solar");
         //var hiring = document.getElementById("hiring");
         //var sat = document.getElementById("sat");
         var height = $(window).height();
-        $("#rocket").height((height-$("header").height())*2);
+        $("#rocket").height((height-$("#main-header").height())*2);
         var ctnheight = rocketctn.offsetHeight;
         var rheight = rocket.offsetHeight;
         var rotationS =0;
@@ -73,7 +73,7 @@
             gamesOffsetTop = $(games).offset().top;
             //blogOffsetTop = $(blog).offset().top;
             //satOffsetTop = $(satellite).offset().top;
-            $("#rocket").height(($(window).height()-$("header").height())*2);
+            $("#rocket").height(($(window).height()-$("#main-header").height())*2);
             ctnheight = rocketctn.offsetHeight;
             rheight = rocket.offsetHeight;
         });

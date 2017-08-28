@@ -1149,3 +1149,18 @@ body.sed-app-editor .single-slider-wrapper-outer {
 .single-slider-wrapper.slick-slider {
     padding: 0;
 }
+
+
+/******************************/
+
+header.module.module-header.header-default {
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+}
+
+
+
+
+
+

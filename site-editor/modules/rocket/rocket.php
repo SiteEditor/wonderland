@@ -49,8 +49,9 @@ class PBRocketShortcode extends PBShortcodeClass{
     function styles(){
         return array(
             array('rocket-skin-default', get_stylesheet_directory_uri().'/site-editor/modules/rocket/skins/default/css/style.css' ,'1.0.0' ) ,
+            array('rocket-skin-skin1', get_stylesheet_directory_uri().'/site-editor/modules/rocket/skins/skin1/css/style.css' ,'1.0.0' ) ,
         );
-    }
+    } 
 
     function shortcode_settings(){
 
@@ -76,6 +77,16 @@ class PBRocketShortcode extends PBShortcodeClass{
                 "mode" => "html",
             ),
             'panel'               => 'rocket_settings_panel',
+        );
+
+        $params['skin'] = array(
+            "type"                => "skin" ,
+            "label"               => __("Change skin", "site-editor"),
+            'button_style'        => 'menu' ,
+            'has_border_box'      => false ,
+            'icon'                => 'sedico-change-skin' ,
+            'field_spacing'       => 'sm' ,
+            'priority'            => 540
         );
 
         $params['animation'] =  array(

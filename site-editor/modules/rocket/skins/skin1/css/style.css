@@ -1,0 +1,192 @@
+/* Satellite */
+
+#satellite {
+    height: 440px;
+    position: relative;
+    top: -54px;
+}
+
+#satellite > .s,
+#satellite > #planet {
+    -webkit-animation: none;
+    animation: none;
+    transform: translate3d(0, 0, 0);
+    -webkit-transform: translate3d(0, 0, 0);
+    width: 100%;
+    height: 2000px;
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-size: 100%;
+}
+
+#satellite > .s#s1 {
+    z-index: 5;
+    padding-right: 50px;
+    left: 0;
+    position: absolute;
+    top: -50px;
+    background-image: url(../img/top-clouds.png);
+}
+
+#satellite > .s#s1.on {
+    transform: translateZ(0);
+    -webkit-animation: bouncing 5s linear infinite;
+    animation: bouncing 5s linear infinite;
+}
+
+#satellite > .s#s2 {
+    z-index: 4;
+    padding-right: 50px;
+    left: 0px;
+    position: absolute;
+    top: 50px;
+    background-image: url(../img/middle-clouds.png);
+}
+
+#satellite > .s#s2.on {
+    transform: translateZ(0);
+    -webkit-animation: bouncing 6s linear infinite;
+    animation: bouncing 6s linear infinite;
+}
+
+#satellite > .s#s3 {
+    z-index: 1;
+    padding-right: 50px;
+    left: 0px;
+    position: absolute;
+    top: 70px;
+    background-image: url(../img/bottom-clouds.png);
+}
+
+#satellite > .s#s3.on {
+    transform: translateZ(0);
+    -webkit-animation: bouncing 8s linear infinite;
+    animation: bouncing 8s linear infinite;
+}
+
+#satellite > #planet {
+    z-index: 2;
+    width: 960px;
+    height: 960px;
+    background-size: 100%;
+    position: absolute;
+    top: -410px;
+    left: 50%;
+    margin-left: -480px;
+    background-image: url(../img/planet.png);
+}
+
+#satellite > #planet.on {
+    transform: translateZ(0);
+    -webkit-animation: turning 120s linear infinite;
+    animation: turning 120s linear infinite;
+}
+
+#satellite > #orbit {
+    z-index: 2;
+    width: 1060px;
+    height: 1060px;
+    background-size: 100%;
+    position: absolute;
+    top: -460px;
+    left: 50%;
+    margin-left: -530px;
+    background-image: url(../img/orbit.png);
+}
+
+#satellite > #sat {
+    z-index: 2;
+    width: 1136px;
+    height: 1136px;
+    background-size: 80px;
+    background-repeat: no-repeat;
+    background-position: bottom;
+    position: absolute;
+    top: -498px;
+    left: 50%;
+    margin-left: -568px;
+    background-image: url(../img/satellite.png);
+}
+
+#satellite.inversed {
+    top: 0;
+    padding-top: 114px;
+}
+
+#satellite.inversed > .s,
+#satellite.inversed > #planet {
+    background-position: bottom center;
+}
+
+#satellite.inversed > #planet {
+    top: initial;
+    bottom: -410px;
+}
+
+#satellite.inversed > #orbit {
+    top: initial;
+    bottom: -460px;
+}
+
+#satellite.inversed > .s#s1 {
+    top: initial;
+    bottom: -10px;
+    background-image: url(../img/top-clouds-inversed.png);
+}
+
+#satellite.inversed > .s#s2 {
+    top: initial;
+    position: absolute;
+    bottom: 50px;
+    background-image: url(../img/middle-clouds-inversed.png);
+}
+
+#satellite.inversed > .s#s3 {
+    top: initial;
+    position: absolute;
+    bottom: 70px;
+    background-image: url(../img/bottom-clouds-inversed.png);
+}
+
+#satellite.inversed > #sat {
+    background-position: top;
+    position: absolute;
+    bottom: -498px;
+    top: initial;
+}
+
+@keyframes bouncing {
+    from {
+        transform: rotate(0deg) translate(-5px) rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg) translate(-5px) rotate(-360deg);
+    }
+}
+
+@-webkit-keyframes bouncing {
+    from {
+        transform: rotate(0deg) translate(-5px) rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg) translate(-5px) rotate(-360deg);
+    }
+}
+
+@keyframes turning {
+    from {
+        transform: rotate(360deg);
+    }
+    to {
+        transform: rotate(0deg)
+    }
+}
+
+@-webkit-keyframes turning {
+    from {
+        -webkit-transform: rotate(360deg)
+    }
+    to {
+        -webkit-transform: rotate(0deg)
+    }
+}
