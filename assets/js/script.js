@@ -176,7 +176,7 @@
             //servicesOffsetTop = $(services).offset().top;
             //satOffsetTop = $(satellite).offset().top;
             $("#rocket .l").height(height);
-            //$.srSmoothscroll();
+            $.srSmoothscroll();
 
             anim();
 

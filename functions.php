@@ -12,10 +12,15 @@ function wonderland_enqueue_styles() {
         get_stylesheet_directory_uri() . '/style.css',
         array('parent-style')
     );
+
+    wp_enqueue_script( "jquery-mousewheel" , get_stylesheet_directory_uri() . '/assets/js/jquery.mousewheel.min.js' , array( 'jquery' ) , "3.1.13" , true );
+
+    wp_enqueue_script( "simplr-smoothscroll" , get_stylesheet_directory_uri() . '/assets/js/jquery.simplr.smoothscroll.min.js' , array( 'jquery' ) , "1.0.1" , true );
+
     /**
      * Theme Front end main js
      */
-    wp_enqueue_script( "wonderland-script" , get_stylesheet_directory_uri() . '/assets/js/script.js' , array( 'jquery', 'carousel' , 'sed-livequery' , 'jquery-ui-accordion' , 'jquery-ui-tabs' ) , "1.0.0" , true );
+    wp_enqueue_script( "wonderland-script" , get_stylesheet_directory_uri() . '/assets/js/script.js' , array( 'jquery', 'carousel' , 'sed-livequery' , 'jquery-ui-accordion' , 'jquery-ui-tabs' , 'jquery-mousewheel' , 'simplr-smoothscroll' ) , "1.0.0" , true );
 
     //wp_enqueue_script('sed-masonry');
 
