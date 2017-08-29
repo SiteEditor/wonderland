@@ -49,13 +49,13 @@
             var rocket = document.getElementById("r");
             var rocketParagraph = document.getElementById("rocketP");
             var rocketctn = document.getElementById("rocket");
-            //var planet = document.getElementById("planet");
-            //var satellite = document.getElementById("satellite");
+            var planet = document.getElementById("planet");
+            var satellite = document.getElementById("satellite");
             var games = document.getElementById("games");
-            //var blog = document.getElementById("blog");
+            var services = document.getElementById("online-reservation-services");
             //var solar = document.getElementById("solar");
             //var hiring = document.getElementById("hiring");
-            //var sat = document.getElementById("sat");
+            var sat = document.getElementById("sat");
             var height = $(window).height();
             $("#rocket").height((height - $("#main-header").height()) * 2);
             var ctnheight = rocketctn.offsetHeight;
@@ -68,14 +68,14 @@
             var rocketbg = false;
             var scrollVal = window.pageYOffset;
             var gamesOffsetTop = $(games).offset().top;
-            //blogOffsetTop = $(blog).offset().top;
-            //satOffsetTop = $(satellite).offset().top;
+            var servicesOffsetTop = $(services).offset().top;
+            var satOffsetTop = $(satellite).offset().top;
 
             $(window).resize(function () {
                 height = $(window).height();
                 gamesOffsetTop = $(games).offset().top;
-                //blogOffsetTop = $(blog).offset().top;
-                //satOffsetTop = $(satellite).offset().top;
+                servicesOffsetTop = $(services).offset().top;
+                satOffsetTop = $(satellite).offset().top;
                 $("#rocket").height(($(window).height() - $("#main-header").height()) * 2);
                 ctnheight = rocketctn.offsetHeight;
                 rheight = rocket.offsetHeight;
@@ -127,22 +127,20 @@
 
             };
 
-            /*var animSat = function () {
+            var animSat = function () {
 
-             console.log("SCROLLING SAT");
+                 console.log("SCROLLING SAT");
 
-             rotationS = Math.round(Math.max(0,Math.min(((scrollVal-satOffsetTop+(planet.offsetHeight/2))/(planet.offsetHeight/2)*180),180)))-90;
-             //if(!$("#satellite .s").hasClass("on")) $("#satellite .s").addClass("on");
+                 rotationS = Math.round(Math.max(0,Math.min(((scrollVal-satOffsetTop+(planet.offsetHeight/2))/(planet.offsetHeight/2)*180),180)))-90;
+                 //if(!$("#satellite .s").hasClass("on")) $("#satellite .s").addClass("on");
 
-             sat.style.webkitTransform = "rotate("+ -rotationS +"deg)";
-             sat.style.MozTransform = "rotate("+ -rotationS +"deg)";
-             sat.style.msTransform = "rotate("+ -rotationS +"deg)";
-             sat.style.OTransform = "rotate("+ -rotationS +"deg)";
-             sat.style.transform = "rotate("+ -rotationS +"deg)";
+                 sat.style.webkitTransform = "rotate("+ -rotationS +"deg)";
+                 sat.style.MozTransform = "rotate("+ -rotationS +"deg)";
+                 sat.style.msTransform = "rotate("+ -rotationS +"deg)";
+                 sat.style.OTransform = "rotate("+ -rotationS +"deg)";
+                 sat.style.transform = "rotate("+ -rotationS +"deg)";
 
-
-
-             };*/
+             };
 
             function anim() {
 
@@ -161,19 +159,21 @@
                         rocket.style.display = "none";
                         rocketParagraph.style.display = "none";
                     }
-                    /*if(scrollVal < blogOffsetTop && scrollVal > satOffsetTop-height) {
-                     animSat();
-                     }*/
+
+                    if(scrollVal < servicesOffsetTop && scrollVal > satOffsetTop-height) {
+                        animSat();
+                    }
+
 
                 }
 
             }
 
 
-            $("html, body").animate({scrollTop: 400}, 1200);
+            $("html, body").animate({scrollTop: 0}, 3200);
 
             //gamesOffsetTop = $(games).offset().top;
-            //blogOffsetTop = $(blog).offset().top;
+            //servicesOffsetTop = $(services).offset().top;
             //satOffsetTop = $(satellite).offset().top;
             $("#rocket .l").height(height);
             //$.srSmoothscroll();
