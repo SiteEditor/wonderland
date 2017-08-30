@@ -1,0 +1,73 @@
+/* Solar System */
+
+#solar-system-1 {
+    position: relative;
+    margin-bottom: -200px;
+    z-index: 0;
+}
+
+#solar-system {
+    height: 700px;
+    background-image: url(../img/solar-system.png);
+    -webkit-animation: turning 50s linear infinite;
+    animation: turning 50s linear infinite;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin-bottom: 0;
+    z-index: 3;
+    position: relative;
+    display: block;
+}
+
+#solar-system-1 * {
+    /* -webkit-transform: translateZ(0); */
+    /* transform: translateZ(0); */
+}
+
+#solar-system-1 .l {
+    background-repeat: repeat-x;
+    bottom: 160px;
+    position: absolute;
+    width: 100%;
+    height: 600px;
+    background-position: center bottom;
+    z-index: 1;
+    background-size: 108%;
+}
+
+#solar-system-1 .l#layer1 {
+    z-index: 4;
+    background-image: url(../img/clouds-foreground.png);
+    background-position: center bottom;
+    background-size: 102%;
+    bottom: 50px;
+}
+
+#solar-system-1 .l#layer2 {
+    z-index: 2;
+    background-image: url(../img/clouds-mid.png);
+}
+
+#solar-system-1 .l#layer3 {
+    z-index: 1;
+    background-image: url(../img/clouds-bg.png);
+}
+
+@keyframes turning {
+    from {
+        transform: rotate(360deg);
+    }
+    to {
+        transform: rotate(0deg)
+    }
+}
+
+@-webkit-keyframes turning {
+    from {
+        -webkit-transform: rotate(360deg)
+    }
+    to {
+        -webkit-transform: rotate(0deg)
+    }
+}

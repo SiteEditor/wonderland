@@ -19,7 +19,7 @@
 	    <div class="single-wrapper">
 	        <div class="single-heading">
 	            <div class="single-heading-inner">
-	                <h3><?php the_title(); ?></h3>
+	                <h4 class="text-first-main"><?php the_title(); ?></h4>
 	            </div>
 	        </div>
 	        <!--<div class="single-img">        	

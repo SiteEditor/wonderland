@@ -1,0 +1,40 @@
+/* Solar System */
+
+#clouds {
+    position: relative;
+    z-index: 0;
+}
+
+#clouds * {
+    /* -webkit-transform: translateZ(0); */
+    /* transform: translateZ(0); */
+}
+
+#clouds .l {
+    background-repeat: repeat-x;
+    bottom: -50px;
+    position: absolute;
+    width: 100%;
+    height: 600px;
+    background-position: center bottom;
+    z-index: 1;
+    background-size: 108%;
+}
+
+#clouds .l#layer1 {
+    z-index: 4;
+    background-image: url(../img/clouds-foreground.png);
+    background-position: center bottom;
+    background-size: 102%;
+    bottom: -150px;
+}
+
+#clouds .l#layer2 {
+    z-index: 2;
+    background-image: url(../img/clouds-mid.png);
+}
+
+#clouds .l#layer3 {
+    z-index: 1;
+    background-image: url(../img/clouds-bg.png);
+}

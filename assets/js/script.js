@@ -55,7 +55,7 @@
             var services = document.getElementById("online-reservation-services");
             //var solar = document.getElementById("solar");
             //var hiring = document.getElementById("hiring");
-            var sat = document.getElementById("sat");
+            var sat = document.getElementById("sat"); //console.log(sat);
             var height = $(window).height();
             $("#rocket").height((height - $("#main-header").height()) * 2);
             var ctnheight = rocketctn.offsetHeight;
@@ -69,7 +69,7 @@
             var scrollVal = window.pageYOffset;
             var gamesOffsetTop = $(games).offset().top;
             var servicesOffsetTop = $(services).offset().top;
-            var satOffsetTop = $(satellite).offset().top;
+            var satOffsetTop = $(satellite).offset().top;//console.log(satOffsetTop);
 
             $(window).resize(function () {
                 height = $(window).height();

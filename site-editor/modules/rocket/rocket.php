@@ -50,6 +50,9 @@ class PBRocketShortcode extends PBShortcodeClass{
         return array(
             array('rocket-skin-default', get_stylesheet_directory_uri().'/site-editor/modules/rocket/skins/default/css/style.css' ,'1.0.0' ) ,
             array('rocket-skin-skin1', get_stylesheet_directory_uri().'/site-editor/modules/rocket/skins/skin1/css/style.css' ,'1.0.0' ) ,
+            array('rocket-skin-skin2', get_stylesheet_directory_uri().'/site-editor/modules/rocket/skins/skin2/css/style.css' ,'1.0.0' ) ,
+            array('rocket-skin-skin3', get_stylesheet_directory_uri().'/site-editor/modules/rocket/skins/skin3/css/style.css' ,'1.0.0' ) ,
+            array('rocket-skin-skin4', get_stylesheet_directory_uri().'/site-editor/modules/rocket/skins/skin4/css/style.css' ,'1.0.0' ) ,
         );
     } 
 

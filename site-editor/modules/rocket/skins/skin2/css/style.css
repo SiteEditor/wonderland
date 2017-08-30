@@ -1,0 +1,44 @@
+/* Solar System */
+
+#solar-system-turning {
+    height: 700px;
+    background-image: url(../img/solar-system.png);
+    -webkit-animation: turning 50s linear infinite;
+    animation: turning 50s linear infinite;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin-bottom: -350px;    
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+
+@keyframes turning {
+    from {
+        transform: rotate(360deg);
+    }
+    to {
+        transform: rotate(0deg)
+    }
+}
+
+@-webkit-keyframes turning {
+    from {
+        -webkit-transform: rotate(360deg)
+    }
+    to {
+        -webkit-transform: rotate(0deg)
+    }
+}
+
+
+@media screen and (max-width: 768px) {
+
+    #solar-system-turning {
+        height: 400px;
+        max-width: 400px;
+        margin-bottom: -200px;
+    }
+
+}
