@@ -8,14 +8,22 @@
 #rocket > p {
     z-index: 3;
     font-weight: bold;
-    color: #cbab8f;
+    color: #f1a31d;
     font-size: 30px;
     text-align: center;
-    margin-top: 160px;
+    margin-top: 140px;
     position: fixed;
     left: 50%;
     margin-left: -480px;
     display: block;
+}
+
+.sed-app-editor #rocket > p {
+    margin-top: 30px;
+}
+
+#rocket > p * {
+    color: #f1592a;
 }
 
 #rocket * {
@@ -114,7 +122,7 @@
         display: block!important;
         position: relative;
         width: 100%;
-        margin: 60px 0;
+        margin: 30px 0;
         left: initial;
         font-size: 20px;
         padding: 0 30px; 

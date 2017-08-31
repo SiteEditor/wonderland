@@ -994,6 +994,40 @@ body .wonderland-custom-post-type .tg-item-overlay:before {
     /*background-color: #8b23be;*/
 }
 
+
+@media screen and (max-width: 768px) {   
+
+    .tg-grid-wrapper.grid-banners .tg-item.tg-banner:hover .tg-bottom-holder {
+        -webkit-transform: translate3d(0%,100%,0px);
+        -moz-transform: translate3d(0%,100%,0px);
+        -ms-transform: translate3d(0%,100%,0px);
+        transform: translate3d(0%,100%,0px);
+    }
+
+    .tg-grid-wrapper.grid-banners .tg-item .tg-item-overlay:before {
+        font-size: 24px;
+        width: 52px;
+        height: 26px;
+        line-height: 30px;
+        margin: 0 -28px 0;
+    }
+
+    .tg-grid-wrapper.grid-banners .tg-item .tg-item-overlay {
+        margin-top: -40px;
+    }
+
+    .tg-grid-wrapper.grid-banners .tg-item .tg-item-title {
+        margin: -40px 0 0 0;
+        padding: 10px 25px;
+        font-size: 12px;
+    }
+
+    .tg-grid-wrapper.grid-banners .tg-item:hover .tg-item-overlay:before {
+        content: "\f106";
+    }  
+
+}  
+
 /********************************/
 
 .single-slider-wrapper-outer {
@@ -1189,6 +1223,30 @@ body.sed-app-editor .single-slider-wrapper-outer {
     } 
 }
 
+#contact-us-page-content + .sed-row-pb #footer-back-to-top #return-to-top i {
+    border: 10px solid #fcf8f5;
+    border-bottom-color: transparent;
+}
+
+
+/********************************/
+
+#footer-back-to-top-2 #return-to-top {
+    background-size: 100% auto;
+    background-image: url(images/back.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: initial;
+    width: 65px;
+    height: 120px;
+    display: block;
+}
+
+#footer-back-to-top-2 #return-to-top i {
+    display: none !important;
+}
+
+
 /*******************************/
 
 .module.module-button.btn-with-arrow .btn {
@@ -1229,6 +1287,18 @@ body.sed-app-editor .single-slider-wrapper-outer {
     background: #ea8a16;
 }
 
+@media screen and (max-width: 350px) {   
+
+    .formpage-blog-element .module.module-button.btn-with-arrow .btn {
+        padding-right: 2em;
+        padding-left: 2em;
+    }
+
+    .formpage-blog-element .module.module-button.btn-with-arrow .btn:after {
+        display: none;
+    }
+
+}
 
 /******************************/
 
