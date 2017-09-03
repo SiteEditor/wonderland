@@ -81,7 +81,7 @@ $post_gallery = array_filter($post_gallery);
 							?>
 						</div><!-- the_content -->     
 		            </div>
-		            <a class="single-home-url" href="<?php echo esc_url( home_url( '/' ) ); ?>"> <?php echo __('Back', 'twentyseventeen'); ?> <i class="fa fa-angle-left"></i> </a>
+		            <a class="single-home-url" href="<?php echo esc_url( home_url( '/' ) ); ?>"> <?php echo __('Back', 'wonderland'); ?> <i class="fa fa-angle-left"></i> </a>
 		        </div>
 		        
 		    </div>  

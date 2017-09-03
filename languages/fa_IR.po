@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: Mafiran Project\n"
-"POT-Creation-Date: 2017-07-23 13:18+0430\n"
-"PO-Revision-Date: 2017-07-23 13:18+0430\n"
+"Project-Id-Version: Wonderland Iran Project\n"
+"POT-Creation-Date: 2017-09-03 22:00+0430\n"
+"PO-Revision-Date: 2017-09-03 22:00+0430\n"
 "Last-Translator: \n"
 "Language-Team: Site Editor Team <info@siteeditor.org>\n"
 "Language: fa_IR\n"
@@ -19,81 +19,53 @@ msgstr ""
 "X-Poedit-SearchPath-0: .\n"
 "X-Poedit-SearchPathExcluded-0: *.js\n"
 
-#: archive-product.php:55
-msgid "Products"
-msgstr "محصولات"
-
-#: archive-product.php:139 archive-project.php:85 archive-service.php:156
-msgid "Previous page"
-msgstr "صفحه قبلی"
-
-#: archive-product.php:140 archive-project.php:86 archive-service.php:157
-msgid "Next page"
-msgstr "صفحه بعدی"
-
-#: archive-product.php:141 archive-project.php:87 archive-service.php:158
-msgid "Page"
-msgstr "برگه"
-
-#: archive-project.php:7
-msgid "Done Projects"
-msgstr "پروژه های انجام شده"
-
-#: archive-service.php:129
-msgid "Pages:"
+#: functions.php:62
+msgid "Services Menu"
 msgstr ""
 
-#: functions.php:129
-msgid "Product Archive Description"
+#: header.php:36
+msgid "Skip to content"
 msgstr ""
 
-#: functions.php:139
-msgid "Home Page Product Description"
+#: index.php:38
+msgid "Blog"
 msgstr ""
 
-#: single-product.php:82
-msgid "Short Description"
-msgstr "توضیحات کوتاه"
-
-#: single-product.php:97
-msgid "Description"
-msgstr "توضیحات"
-
-#: single-project.php:60
-msgid "Employer:"
-msgstr "کارفرما:"
-
-#: single-project.php:61
-msgid "Date:"
-msgstr "تاریخ:"
-
-#: site-editor/modules/mafiran-products/mafiran-products.php:22
-#: site-editor/modules/mafiran-products/mafiran-products.php:106
-msgid "Mafiran Products"
+#: single-gallery.php:69 single.php:69
+msgid "Previous Post"
 msgstr ""
 
-#: site-editor/modules/mafiran-products/mafiran-products.php:23
-#: site-editor/modules/mafiran-products/mafiran-products.php:107
-msgid "List of mafiran products for built-in and custom post types"
+#: single-gallery.php:69 single.php:69
+msgid "Previous"
 msgstr ""
 
-#: site-editor/modules/mafiran-products/mafiran-products.php:57
-msgid "Mafiran Products Settings"
+#: single-gallery.php:70 single.php:70
+msgid "Next Post"
 msgstr ""
 
-#: site-editor/modules/mafiran-products/mafiran-products.php:79
-#: site-editor/modules/posts/posts.php:270
-msgid "Animation Settings"
+#: single-gallery.php:70 single.php:70
+msgid "Next"
 msgstr ""
 
-#: site-editor/modules/mafiran-products/mafiran-products.php:89
+#: site-editor/modules/in-btn-back/in-btn-back.php:19
+#: site-editor/modules/in-btn-back/in-btn-back.php:20
+#: site-editor/modules/in-btn-back/in-btn-back.php:77
+#: site-editor/modules/in-btn-back/in-btn-back.php:94
+#: site-editor/modules/in-btn-back/in-btn-back.php:95
+msgid "Back To Up"
+msgstr ""
+
+#: site-editor/modules/in-btn-back/in-btn-back.php:56
 #: site-editor/modules/posts/posts.php:280
+#: site-editor/modules/rocket/rocket.php:107
 msgid "Module Wrapper Settings"
 msgstr ""
 
-#: site-editor/modules/mafiran-products/skins/default/sed_mafiran_products.php:87
-msgid "Products..."
-msgstr "محصولات..."
+#: site-editor/modules/in-btn-back/in-btn-back.php:61
+#: site-editor/modules/posts/posts.php:270
+#: site-editor/modules/rocket/rocket.php:97
+msgid "Animation Settings"
+msgstr ""
 
 #: site-editor/modules/posts/posts.php:22
 #: site-editor/modules/posts/posts.php:296
@@ -174,12 +146,76 @@ msgid "Select Terms for current selected Taxonomy"
 msgstr ""
 
 #: site-editor/modules/posts/posts.php:260
+#: site-editor/modules/rocket/rocket.php:87
 msgid "Change skin"
 msgstr ""
 
-#: site-editor/modules/posts/skins/default/sed_posts.php:47
+#: site-editor/modules/posts/skins/default/sed_posts.php:38
+#: site-editor/modules/posts/skins/skin1/sed_posts.php:38
+#: site-editor/modules/posts/skins/skin2/sed_posts.php:38
 msgid "Not found result"
 msgstr ""
+
+#: site-editor/modules/rocket/rocket.php:23
+#: site-editor/modules/rocket/rocket.php:123
+msgid "Rocket"
+msgstr ""
+
+#: site-editor/modules/rocket/rocket.php:24
+msgid "Rocket Animation Module"
+msgstr ""
+
+#: site-editor/modules/rocket/rocket.php:62
+msgid "Rocket Settings"
+msgstr ""
+
+#: site-editor/modules/rocket/rocket.php:75
+msgid "Ads Paragraph"
+msgstr ""
+
+#: site-editor/modules/rocket/rocket.php:124
+msgid "List of rocket for built-in and custom post types"
+msgstr ""
+
+#: template-parts/custom-post-type/single-post-gallery.php:78
+#: template-parts/custom-post-type/single-post.php:36
+#, php-format
+msgid "Continue reading<span class=\"screen-reader-text\"> \"%s\"</span>"
+msgstr ""
+
+#: template-parts/custom-post-type/single-post-gallery.php:84
+msgid "Back"
+msgstr "برگشت"
+
+#~ msgid "Products"
+#~ msgstr "محصولات"
+
+#~ msgid "Previous page"
+#~ msgstr "صفحه قبلی"
+
+#~ msgid "Next page"
+#~ msgstr "صفحه بعدی"
+
+#~ msgid "Page"
+#~ msgstr "برگه"
+
+#~ msgid "Done Projects"
+#~ msgstr "پروژه های انجام شده"
+
+#~ msgid "Short Description"
+#~ msgstr "توضیحات کوتاه"
+
+#~ msgid "Description"
+#~ msgstr "توضیحات"
+
+#~ msgid "Employer:"
+#~ msgstr "کارفرما:"
+
+#~ msgid "Date:"
+#~ msgstr "تاریخ:"
+
+#~ msgid "Products..."
+#~ msgstr "محصولات..."
 
 #~ msgid "Products:"
 #~ msgstr "محصولات"
