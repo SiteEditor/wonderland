@@ -874,7 +874,7 @@ a:active {
 .arc-rotate .loader .arc { 
     position: absolute;
     border: 2px solid;
-    border-color: transparent #88317f #88317f #88317f;
+    border-color: transparent #c90281 #c90281 #c90281 ;
     border-radius: 50%;
     margin: 32%;
     width: 36%;
