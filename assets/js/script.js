@@ -170,7 +170,11 @@
             }
 
 
-            $("html, body").animate({scrollTop: 0}, 3200);
+            //window.onload = function () { 
+
+                $("html, body").animate({scrollTop: 0}, 3900);
+
+            //};
 
             //gamesOffsetTop = $(games).offset().top;
             //servicesOffsetTop = $(services).offset().top;
