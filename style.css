@@ -1377,3 +1377,8 @@ body select option {
 body .gfield_captcha_input_container input {
     min-width: 50%;
 }
+
+
+.search-form .search-field {
+    padding-right: 60px;
+}
